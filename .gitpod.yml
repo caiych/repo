@@ -12,3 +12,4 @@ vscode:
   extensions:
     - bazelbuild.vscode-bazel
     - vscodevim.vim
+    - golang.go
