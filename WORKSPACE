@@ -21,26 +21,14 @@ http_archive(
     ],
 )
 
-load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
 
-new_git_repository(
+go_repository(
     name = "com_github_golang_glog",
-    remote = "https://github.com/golang/glog.git",
-    branch = "master",
-    build_file_content = """
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
-go_library(
-    name = "go_default_library",
     importpath = "github.com/golang/glog",
-    visibility = ["//visibility:public"],
-    srcs = [
-        "glog.go",
-        "glog_file.go",
-    ]
+    sum = "h1:2voWjNECnrZRbfwXxHB1/j8wa6xdKn85B5NzgVL/pTU=",
+    version = "v0.0.0-20210429001901-424d2337a529",
 )
-    """,
-)
-
 
 go_rules_dependencies()
 
