@@ -13,3 +13,4 @@ vscode:
     - bazelbuild.vscode-bazel
     - vscodevim.vim
     - golang.go
+    - paulvarache.vscode-taskfile

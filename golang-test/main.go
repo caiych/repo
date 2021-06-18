@@ -1,7 +1,12 @@
 package main
 
-import "github.com/golang/glog"
+import (
+	"flag"
+
+	"github.com/golang/glog"
+)
 
 func main() {
+	flag.Parse()
 	glog.Infof("Hi all!")
 }

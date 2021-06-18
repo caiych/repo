@@ -1,0 +1,22 @@
+version: 2
+
+tasks:
+  glaze:
+    cmds:
+      - bazelisk run //:gazelle
+    silent: true
+  testall:
+    cmds: 
+      - bazelisk test //...
+  buildall:
+    cmds: 
+      - bazelisk build //...
+  build:
+    cmds:
+      - bazelisk build {{.CLI_ARGS}}
+  test:
+    cmds:
+      - bazelisk test {{.CLI_ARGS}}
+  run:
+    cmds:
+      - bazelisk run {{.CLI_ARGS}}
