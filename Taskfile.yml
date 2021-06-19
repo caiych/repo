@@ -23,3 +23,7 @@ tasks:
     cmds:
       # - go get {{.CLI_ARGS}}
       - bazelisk run //:gazelle -- update-repos -from_file=go.mod
+  exercise:
+    cmds:
+      - task: buildall
+      - task: testall
