@@ -17,5 +17,7 @@ jobs:
           go-version: '^1.16'
       - name: Setup build
         run: .gitpod/setup-build.sh 
+      - name: Install Task
+        uses: arduino/setup-task@v1
       - name: Test all
         run: task testall
