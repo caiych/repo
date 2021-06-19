@@ -1,12 +1,15 @@
-name: presubmit
+name: tests
 
 on:
+  push:
+    branches:
+      - 'master'
   pull_request:
     branches:
       - 'master'
 
 jobs:
-  presubmit:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
