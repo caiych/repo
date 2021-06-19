@@ -3,23 +3,23 @@ version: 3
 tasks:
   glaze:
     cmds:
-      - bazel run //:gazelle
+      - bazelisk run //:gazelle
   testall:
     cmds: 
-      - bazel test //...
+      - bazelisk test //...
   buildall:
     cmds: 
-      - bazel build //...
+      - bazelisk build //...
   build:
     cmds:
-      - bazel build {{.CLI_ARGS}}
+      - bazelisk build {{.CLI_ARGS}}
   test:
     cmds:
-      - bazel test {{.CLI_ARGS}}
+      - bazelisk test {{.CLI_ARGS}}
   run:
     cmds:
-      - bazel run {{.CLI_ARGS}}
+      - bazelisk run {{.CLI_ARGS}}
   goget:
     cmds:
       # - go get {{.CLI_ARGS}}
-      - bazel run //:gazelle -- update-repos -from_file=go.mod
+      - bazelisk run //:gazelle -- update-repos -from_file=go.mod
