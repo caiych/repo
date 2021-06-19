@@ -1,7 +1,7 @@
 
 tasks:
   - init: .gitpod/init.sh # runs during prebuild
-    command: echo 'start script'
+    command: task exercise # runs at start up
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
@@ -14,3 +14,4 @@ vscode:
     - vscodevim.vim
     - golang.go
     - paulvarache.vscode-taskfile
+    - .gitpod/vscode-taskfile-0.0.6.vsix
