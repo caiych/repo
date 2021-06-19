@@ -1,4 +1,4 @@
-version: 3
+version: 2
 
 tasks:
   glaze:
@@ -7,6 +7,9 @@ tasks:
   testall:
     cmds: 
       - bazelisk test //...
+    sources: 
+      - "**/*"
+
   buildall:
     cmds: 
       - bazelisk build //...
@@ -21,7 +24,6 @@ tasks:
       - bazelisk run {{.CLI_ARGS}}
   goget:
     cmds:
-      # - go get {{.CLI_ARGS}}
       - bazelisk run //:gazelle -- update-repos -from_file=go.mod
   exercise:
     cmds:
