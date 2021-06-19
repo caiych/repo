@@ -1,3 +1,3 @@
 #!/bin/bash
 
-go install github.com/bazelbuild/bazelisk
+go install github.com/bazelbuild/bazelisk@latest
