@@ -1,0 +1,8 @@
+{
+    "go.goroot": "${workspaceFolder}/bazel-repo/external/go_sdk",
+    "go.toolsEnvVars": {
+      "GOPACKAGESDRIVER_BAZEL_QUERY": "kind(go_binary, //...)",
+      "GOPACKAGESDRIVER": "${workspaceFolder}/tools/gopackagesdriver.sh"
+    },
+    "go.useLanguageServer": true
+}
