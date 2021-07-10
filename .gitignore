@@ -1,1 +1,4 @@
 bazel-*
+# this is not ideal, CI build need empty rc and dev needs this.
+# content of this is set in setup-dev.sh
+.bazelrc
