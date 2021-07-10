@@ -13,6 +13,7 @@ go_library(
     importpath = "github.com/example/project/golang-test",
     visibility = ["//visibility:private"],
     deps = [
+        "//golang-test/proto",
         "@com_github_golang_glog//:glog",
     ],
 )
