@@ -1,0 +1,23 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
+
+proto_library(
+    name = "service_proto",
+    srcs = ["service.proto"],
+    visibility = ["//visibility:public"],
+)
+
+go_proto_library(
+    name = "service_go_proto",
+    importpath = "github.com/example/project/golang-test/proto",
+    proto = ":service_proto",
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "proto",
+    embed = [":service_go_proto"],
+    importpath = "github.com/example/project/golang-test/proto",
+    visibility = ["//visibility:public"],
+)

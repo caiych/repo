@@ -15,3 +15,4 @@ vscode:
     - golang.go
     - paulvarache.vscode-taskfile
     - .gitpod/vscode-taskfile-0.0.6.vsix
+    - zxh404.vscode-proto3
